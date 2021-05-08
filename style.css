@@ -45,7 +45,7 @@
     text-align: right;
     vertical-align:middle;
 }
-input {
+.plus_input {
     width: 30px;
     height: 30px;
     border-radius: 50px;
@@ -69,7 +69,6 @@ input {
     border-radius: 50px;
 }
 .plus {
-    
     background-color: #9953F1;
     border-radius: 50px;
     width: 50px;
