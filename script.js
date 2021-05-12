@@ -1,5 +1,5 @@
 let nameDelo = document.querySelector('.name');
-let button = document.querySelector('.plus');
+let button = document.querySelector('.dobav');
 let todo = document.querySelector('todo');
 // переменная в которую сохранять значение
 let todoList = [];
@@ -7,17 +7,26 @@ let todoList = [];
 
 // Добавляем обработчик событий
 button.addEventListener('click', function() {
-  let newnameDelo = nameDelo.value;
-  todoList.push(newnameDelo);
-  displayDelos();
+  let taskName = newTaskName.value;
+
+  // 1. Проверить на пустоту впианного в поле значения
+  todoList.push(taskName);
+  displayTasks(todoList);
 
 });
 
 // вводим функцию, которая будет перебирать массив todoList
-function displayDelos() {
-  let displayDelos = '';
+function displayTasks(todoList) {
+  // 1. Если массив пустой, то сделать return
+
   todoList.forEach(function(item, i) {
-    displayDelos += item;
+    // 1. Создать элемент li  
+
+    // 2. Вставить в него тест из массива, который мы перебираем 
+
+    // 3. Добавить внутрь элемента li крестик для дальнейшего удаления 
+
+    // 4. вывести элемент внутрь списка .todo 
   })
 }
 
