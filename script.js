@@ -9,36 +9,48 @@ let todoList = [];
 button.addEventListener('click', function() {
   let taskName = newTaskName.value;
   // 1. Проверить на пустоту впианного в поле значения
-  if(taskName !== null) {
-  todoList.push(taskName);
-  displayTasks(todoList);
+  if(taskName !== '') {
+    todoList.push(taskName);
+    displayTasks(todoList);
   };
 });
 
 // вводим функцию, которая будет перебирать массив todoList
 function displayTasks(todoList) {
   // 1. Если массив пустой, то сделать return
-  if (taskName === null) {
-    let result = "Вы ввели пустое значение";
-    return result;
+  if (todoList.length === 0) {
+    return;
   };
     
-  todoList.forEach(function(item, i) {
+  // 1. Очистить область для вставки
+  let resultElement = document.querySelector('.wrapper');
+  resultElement.innerHTML = '';
+
+  todoList.forEach(function(value, index) {
     // 1. Создать элемент li 
     let newElement = document.createElement('div');
 
     // 2. Вставить в него тест из массива, который мы перебираем 
-    newElement.innerText = 'taskName';
-    // 3. Добавить внутрь элемента li крестик для дальнейшего удаления
+    newElement.innerText = value;
 
-    // 4. вывести элемент внутрь списка .todo
-    let resultElement = document.querySelector('.wrapper');
-    resultElement.appendChild(newElement);
+    // 2.1 Добавить кнопку удаления
+        // 2.1.1 Создать элемент крестик (удаление)
+
+        // 2.1.2 Вставить крестик внутрь newElement
+
+        // 2.1.3 Добавить обработчик события на click для созданного крестика
+
+    // 2. вывести элемент внутрь списка .todo
+    resultElement.append(newElement);
   });
 }
   
   
-  
+// todoList = [
+//   'Купить квартиру',
+//   'Почистить ботинки',
+//   'Посмотреть телевизор'
+// ] 
 
   
 
