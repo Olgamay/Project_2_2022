@@ -66,22 +66,24 @@ sortButton.addEventListener ('click', function () {
 })
 
 function sortTasks () {
+    console.log(sortFlag, 'common');
     if (sortFlag === true) {
         todoList.sort((b, a) => {
              if(a > b) {
                  return -1;
             }
+        });
         sortFlag = false;
-      });
+        console.log(sortFlag, 'up');
     } else {
-          todoList.sort((b, a) => {
-                    if(a < b) {
-                      return -1;
-                    };
-                });
-                sortFlag = true;
-              }
-
-              
-  displayTasks(todoList);
+        todoList.sort((b, a) => {
+            if(a < b) {
+                return -1;
+            };
+        });
+        sortFlag = true;
+        console.log(sortFlag, 'down');
+    }
+          
+    displayTasks(todoList);
 }
