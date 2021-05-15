@@ -2,6 +2,7 @@ let newTaskName = document.querySelector('.name');
 let button = document.querySelector('.dobav');
 let todo = document.querySelector('todo');
 let del = document.querySelector('.crest_input');
+let sortFlag = true;
 
 // переменная в которую сохранять значение
 let todoList = [];
@@ -65,18 +66,22 @@ sortButton.addEventListener ('click', function () {
 })
 
 function sortTasks () {
+    if (sortFlag === true) {
+        todoList.sort((b, a) => {
+             if(a > b) {
+                 return -1;
+            }
+        sortFlag = false;
+      });
+    } else {
+          todoList.sort((b, a) => {
+                    if(a < b) {
+                      return -1;
+                    };
+                });
+                sortFlag = true;
+              }
 
-    todoList.sort((b, a) => {
-        if(a > b) {
-            return -1;
-        }
-    });
-
-    displayTasks(todoList);
+              
+  displayTasks(todoList);
 }
-  
-// todoList = [
-//     'a',
-//     'b',
-//     'c'
-// ]
