@@ -2,8 +2,10 @@ let newTaskName = document.querySelector('.name');
 let button = document.querySelector('.dobav');
 let todo = document.querySelector('todo');
 let del = document.querySelector('.crest_input');
+
 // переменная в которую сохранять значение
 let todoList = [];
+
 // указываем что введенное значение будет являться массивом
 
 // Добавляем обработчик событий
@@ -26,10 +28,7 @@ function displayTasks(todoList) {
       return;
     };
     
-  
- 
-
-    todoList.forEach(function(value, index) {
+      todoList.forEach(function(value, index) {
       // 1. Создать элемент li 
       let newElement = document.createElement('div');
 
@@ -49,6 +48,27 @@ function displayTasks(todoList) {
               return item !== newElement.innerText
             });
             displayTasks(todoList);
+            
         }); 
     });
   }
+  let buttonSorting = document.createElement('img');
+  buttonSorting.classList.add(".sorting");
+  buttonSorting.setAttribute("src", "images/sortwhite.svg")
+
+
+  buttonSorting.addEventListener ('click', function () {
+    function sortTasks (a, b) {
+      if(a > b) {
+        return -1;
+      }
+      if (a < b) {
+        return 1;
+      }
+      return 0;
+    }
+    
+    displayTasks(todoList)
+  })
+
+  
