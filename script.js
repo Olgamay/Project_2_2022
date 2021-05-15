@@ -17,7 +17,9 @@ button.addEventListener('click', function() {
         todoList.push(taskName);
         displayTasks(todoList);
       };
+      newTaskName.value = "";
 });
+
 
 
 function addRemoveListener(newElement) {
@@ -61,16 +63,37 @@ function displayTasks(todoList) {
 
 let sortButton = document.querySelector('.sort-button');
 
-sortButton.addEventListener ('click', function () {
+sortButton.addEventListener('mousedown', (event) => {
+    if (event == true) {
+     event.target.setAttribute("src", "images/sortdown.svg")   
+    } else {
+        event.target.setAttribute("src", "images/sortup.svg")
+    }
+});
+
+
+// let downButton = document.createElement('img');
+      
+// downButton.classList.add("crest_input");
+// downButton.setAttribute("src", "images/sortdown.svg");
+
+// let downElement = document.createElement('div')
+
+//         downButton.addEventListener('click', function() {
+//             addRemoveListener(downElement);
+//         }); 
+
+ sortButton.addEventListener ('click', function () {
     sortTasks();
 })
+ 
 
 function sortTasks () {
     console.log(sortFlag, 'common');
     if (sortFlag === true) {
         todoList.sort((b, a) => {
              if(a > b) {
-                 return -1;
+                 return -1
             }
         });
         sortFlag = false;
@@ -83,7 +106,6 @@ function sortTasks () {
         });
         sortFlag = true;
         console.log(sortFlag, 'down');
-    }
-          
+    }     
     displayTasks(todoList);
 }

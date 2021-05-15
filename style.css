@@ -68,40 +68,41 @@
 .dobav_1 {
     display: flex;
     justify-content: center;
+    border-image: none;
+    border-color: #9953F1;
+    
+    
 }
 
 .dobav {
     color: #FFFFFF;
     background-color: #833AE0;
     margin: 20px;
-    width: 50%;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 50px;
+    height: 50px;
+    border: none;
 }
 
 .plus {
     background-color: #9953F1;
-    border-radius: 40px;
+    border-radius: 50px;
     width: 50px;
     height: 50px;
     color: white;
     border: none;
-    line-height: 50px;
-    
+    line-height: 50px;   
 }
-
+/* 
 .dobav_2 {
-    padding-right: 30px;
-}
+    /* padding-right: 30px; */
+    
+*/
 
 .plus_1 {
     margin: 15px;
 }
 
-/* .wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: s;
-} */
