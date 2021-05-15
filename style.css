@@ -78,7 +78,7 @@
     color: #FFFFFF;
     background-color: #833AE0;
     margin: 20px;
-    
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,13 +96,23 @@
     border: none;
     line-height: 50px;   
 }
-/* 
+
 .dobav_2 {
-    /* padding-right: 30px; */
-    
-*/
+    padding: 10px;
+}
+
 
 .plus_1 {
     margin: 15px;
 }
 
+.wrapper {
+    padding: 20px;
+}
+
+.wrapper div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 7px;
+}

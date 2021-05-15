@@ -64,8 +64,8 @@ function displayTasks(todoList) {
 let sortButton = document.querySelector('.sort-button');
 
 sortButton.addEventListener('mousedown', (event) => {
-    if (event == true) {
-     event.target.setAttribute("src", "images/sortdown.svg")   
+    if (sortFlag == true) {
+        event.target.setAttribute("src", "images/sortdown.svg")   
     } else {
         event.target.setAttribute("src", "images/sortup.svg")
     }
