@@ -83,11 +83,13 @@
 
 .plus {
     background-color: #9953F1;
-    border-radius: 50px;
+    border-radius: 40px;
     width: 50px;
     height: 50px;
     color: white;
     border: none;
+    line-height: 50px;
+    
 }
 
 .dobav_2 {
@@ -97,3 +99,9 @@
 .plus_1 {
     margin: 15px;
 }
+
+/* .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: s;
+} */
